@@ -258,7 +258,7 @@ header {
     color: #fff;
     width: 100%;
     background-color: #c9c9c9;
-    background-image: url('https://images.unsplash.com/photo-1521410843026-323be9ead002?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80');
+    background-image: url('https://images.unsplash.com/photo-1501459522532-9f67219c9c7a');
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -277,6 +277,7 @@ header .header-content {
 header .header-content .inner h1 {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 900;
 }
 
 header .header-content .inner p {
@@ -581,14 +582,26 @@ img::-moz-selection {
     background-color: var(--deepRed);
     color: white;
 }
+.plan {
+    box-shadow: 0 9px 24px rgb(0 0 0 / 12%), 0 9px 24px rgb(0 0 0 / 12%);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.plan:hover {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    box-shadow: 0 9px 24px rgb(255 255 255), 0 9px 24px rgb(255 255 255);
+}
 
 .basic-plan {
     max-width: 280px;
     background: #9e9e9e;
-    padding: 16px;
-    border-radius: 16px;
     margin: auto;
     margin-bottom: 32px;
+
 }
 
 .basic-plan .title {
@@ -626,10 +639,8 @@ img::-moz-selection {
 }
 
 .premium-plan {
-    max-width: 300px;
+    max-width: 320px;
     background: #2d2d2d;
-    padding: 16px;
-    border-radius: 16px;
     margin: auto;
 }
 
@@ -689,4 +700,125 @@ footer .list-inline {
 footer .list-inline i {
     font-size: 24px;
     color: var(--white);
+}
+
+#app {
+    transition: 0.1s all;
+}
+
+#app .app-wrapper.app-responsive {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+#app[data-align=right], #app[data-align=right] .app-wrapper {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+#app .app-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+#app .app-wrapper .closed .bubble svg {
+    padding: 13px;
+}
+#app .app-wrapper .closed {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    bottom: 0;
+}
+#app .app-wrapper .closed .bubble {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    -webkit-box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 6%);
+    overflow: hidden;
+    margin: 20px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+    background-color: var(--deepRed);
+}
+#app .app-wrapper .closed[data-align=right] {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+#app .app-wrapper .closed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-height: 100%;
+    max-width: 100%;
+}
+#app .app-wrapper.app-responsive {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+#app[data-align=right], #app[data-align=right] .app-wrapper {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+#app .app-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+#app .contact-number {
+    padding: 16px;
+    background: white;
+    border-radius: 8px;
+    margin-right: 22px;
+    margin-bottom: -7px;
+    font-size: 32px;
+    display: flex;
+}
+#app .contact-number a {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: var(--deepRed);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#app .contact-number .ion-android-close {
+    color: #ff9800;
+    margin-left: 16px;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+#app .contact-number .ion-android-close:hover {
+    color: #e65100;
+    transform: scale(1.1);
 }

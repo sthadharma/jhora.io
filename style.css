@@ -200,6 +200,9 @@ footer {
 .navbar-default .nav>li.active>a:focus:hover {
     background-color: transparent;
 }
+.logo2 {
+    height: 120px;
+}
 
 @media(min-width:768px) {
     .navbar-default {
@@ -249,7 +252,11 @@ footer {
     .navbar-default.affix .nav>li>a:focus:hover {
         color: #4CAF50;
     }
+    .logo2 {
+        height: 200px;
+    }
 }
+
 
 header {
     position: relative;
@@ -624,6 +631,8 @@ img::-moz-selection {
     justify-content: center;
     align-items: center;
     display: flex;
+    background: #2d2d2d;
+    box-shadow: 0px 0px 19px 14px #616161, inset 0px 0px 19px 14px #000000;
 }
 
 .basic-plan .lessons {
@@ -658,12 +667,15 @@ img::-moz-selection {
 .premium-plan .price h2 {
     padding: 16px;
     border-radius: 100px;
-    border: 8px solid #ff1644;
+    border: 8px solid #ffffff;
     height: 120px;
     width: 120px;
     justify-content: center;
     align-items: center;
     display: flex;
+    color: white;
+    background: #2d2d2d;
+    box-shadow: 0px 0px 19px 14px #727272, inset 0px 0px 19px 14px #000;
 }
 
 .premium-plan .lessons {
